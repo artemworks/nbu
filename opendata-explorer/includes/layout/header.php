@@ -21,7 +21,7 @@
             border-right: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
             padding: 10px;
-            background-color: #FEF0FF;
+            background-color: #FCFCFC;
         }
 
         .nav-tabs {

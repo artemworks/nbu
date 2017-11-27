@@ -48,7 +48,7 @@ set_time_limit(0);
 
 			foreach ($entryPointDecoded as $key => $value) {
 				echo "<option value=\"" . $value->apikod . "\"";
-				if ( isset($_GET["apikod"]) ) { if ($_GET["apikod"] == $value->apikod) { echo " selected"; } else { echo " disabled"; } }
+				if ( isset($_GET["apikod"]) ) { if ($_GET["apikod"] == $value->apikod) { echo " selected"; $dataGroupName = $value->txt; } else { echo " disabled"; } }
 				echo ">" . $value->txt . "</option>";			
 			}
 
@@ -379,15 +379,15 @@ set_time_limit(0);
 				$myChart = new FusionCharts("line", "myChartContainer", "100%", "80%", "myGreatChartContainer", "json",
 		            '{
 		                "chart": {
-		                    "caption": "",
-		                    "subCaption": "",
+		                    "caption": "' . $dataGroupName . '",
+		                    "subCaption": "' . $sortArrayFinal[0]->txt . '",
 		                    "xAxisName": "на дату",
 		                    "yAxisName": "в млрд. гривен",
 		                    "numberPrefix": "",
 		                    "formatNumber": "0",
 		                    "formatNumberScale": "0",
 		                    "paletteColors": "#903749, #6A2C70",
-		                    "bgColor": "#FEF0FF",
+		                    "bgColor": "#FCFCFC",
 		                    "canvasBgAlpha": "0",
 		                    "borderAlpha": "5",
 		                    "canvasBorderAlpha": "0",
@@ -492,6 +492,7 @@ set_time_limit(0);
 		        $dataSetContent = null;
 		        $arrDataVis = null;
 		        $arrDataVisOutput = null;
+		        $sortArrayFinal = null;
 			}
 
 			?>
