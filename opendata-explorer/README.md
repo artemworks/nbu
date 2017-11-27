@@ -7,9 +7,9 @@ ___________________
 2. В entrypoint доступны интервалы, разрезы и дата начала ввода данных по датасетам.
 3. Все датасеты уточняются по интервалам freq=
 4. Почти все dimension доступны (кроме odk070)
-5. Почти у всех есть leveli=1
+5. У всех есть leveli=1
 
-См. test.pdf и test.php
+См. [test.pdf](https://github.com/artemworks/nbu/blob/master/opendata-explorer/test.pdf) и test.php
 
 ___________________
 
