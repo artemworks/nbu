@@ -1,8 +1,14 @@
+<?php
+@ini_set('zlib.output_compression', 0);
+@ini_set('implicit_flush', 1);
+@ob_end_clean();
+set_time_limit(0);
+?>
 <?php ini_set('display_errors', '1');  ?>
 <?php require_once("includes/fusioncharts.php"); ?>
 <?php require_once("includes/layout/header.php"); ?>
 <?php
-	$caching = 1;
+	$caching = 0;
 ?>
 
 		<div class="col-md-4">
