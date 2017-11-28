@@ -5,7 +5,7 @@
 						start= and end= working normally instead of date=
 						so we use them just to get additional params
 						*/
-						$otherParametersUrl = "https://bank.gov.ua/NBUStatService/v1/statdirectory/basindbank?" . 
+						$otherParametersUrl = "https://bank.gov.ua/NBUStatService/v1/statdirectory/monetary?" . 
 											  "start=" . 
 											  $testDate . "&end=" . 
 											  $testDate ."&json";
