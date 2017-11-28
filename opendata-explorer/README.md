@@ -47,7 +47,7 @@ ___________________
 
 ![Alt text](/opendata-explorer/ss/04.png?raw=true "Основні показники діяльності банків - Строкові кошти фізичних осіб (з ощадними (депозитними) сертифікатами) - Табличний вигляд")
 
-![Alt text](/opendata-explorer/ss/04.png?raw=true "Лiквiднiсть - Рефiнансування банкiв")
+![Alt text](/opendata-explorer/ss/06.png?raw=true "Лiквiднiсть - Рефiнансування банкiв")
 
 ___________________
 
