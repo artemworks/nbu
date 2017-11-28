@@ -1,11 +1,11 @@
 <?php
 
-						$testDate = "20170701";
+						$testDate = "20171101";
 						/* 
 						start= and end= working normally instead of date=
 						so we use them just to get additional params
 						*/
-						$otherParametersUrl = "https://bank.gov.ua/NBUStatService/v1/statdirectory/monetary?" . 
+						$otherParametersUrl = "https://bank.gov.ua/NBUStatService/v1/statdirectory/liquidity?" . 
 											  "start=" . 
 											  $testDate . "&end=" . 
 											  $testDate ."&json";

@@ -200,7 +200,7 @@ set_time_limit(0);
 
 						// Constructing other parameters taken directly from dataset with test data
 
-						$testDate = "20170701";
+						$testDate = "20171101";
 						/* 
 						start= and end= working normally instead of date=
 						so we use them just to get additional params
@@ -356,6 +356,9 @@ set_time_limit(0);
 
 							$sortArray = null;
 
+							$numItemsInSortArrayFinal = count($sortArrayFinal);
+							if ($numItemsInSortArrayFinal>10) { $labelDisplay = 'rotate'; } else { $labelDisplay = 'wrap'; }
+
 						foreach ($sortArrayFinal as $key => $value) {
 							
 							$floatMoney = floatval(($value->value)/1000);
@@ -421,7 +424,9 @@ set_time_limit(0);
 		                    "legendShadow": "0",
 		                    "legendItemFontSize": "10",
 		                    "legendItemFontColor": "#666666",
-		                    "useDataPlotColorForLabels": "1",
+		                    "useDataPlotColorForLabels": "1",  
+		                	"labelDisplay": "' . $labelDisplay . '",
+		                	"slantLabels": "1",
 		                    "exportEnabled": "1",
 		                    "exportMode": "auto",
 		                    "exportShowMenuItem": "1",
@@ -460,7 +465,8 @@ set_time_limit(0);
 					  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 				';
 
-
+						echo "<h5>" . $dataGroupName . "</h5>";
+						echo "<h6>" . $sortArrayFinal[0]->txt . "</h6>";
 
 						echo "<table class=\"table\">";
 
