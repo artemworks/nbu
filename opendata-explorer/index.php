@@ -241,19 +241,19 @@ set_time_limit(0);
 							echo "<option value=\"" . $idApiParent1 . "\"";
 							if ( isset($_GET["id_api"]) ) { if ($_GET["id_api"] == $value->id_api) { echo " selected"; } }
 							echo ">";
-							echo "• ";
-							echo $value->txt . "</option>";
+							echo "<b>" . $value->txt . "</b></option>";
 							
 							foreach ($dataSetContentModified[2] as $key => $value) {
-								$idApiParent2 = $value->id_api;
 
 								if ($value->parent == $idApiParent1) {
 								echo "<option value=\"" . $value->id_api . "\"";
 								if ( isset($_GET["id_api"]) ) { if ($_GET["id_api"] == $value->id_api) { echo " selected"; } }
 								echo ">";
-								echo "•• ";
-								echo $value->txt . "</option>";
-								} 
+								echo "&nbsp;&nbsp;" . $value->txt . "</option>";
+								$idApiParent2 = $value->id_api;
+								}  else {
+									$idApiParent2 = $idApiParent1;
+								}
 
 								foreach ($dataSetContentModified[3] as $key => $value) {
 									$idApiParent3 = $value->id_api;
@@ -262,8 +262,10 @@ set_time_limit(0);
 									echo "<option value=\"" . $value->id_api . "\"";
 									if ( isset($_GET["id_api"]) ) { if ($_GET["id_api"] == $value->id_api) { echo " selected"; } }
 									echo ">";
-									echo "••• ";
-									echo $value->txt . "</option>";
+									echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . $value->txt . "</option>";
+									$idApiParent3 = $value->id_api;
+									} else {
+										$idApiParent3 = $idApiParent2;
 									}
 
 									foreach ($dataSetContentModified[4] as $key => $value) {
@@ -273,8 +275,10 @@ set_time_limit(0);
 										echo "<option value=\"" . $value->id_api . "\"";
 										if ( isset($_GET["id_api"]) ) { if ($_GET["id_api"] == $value->id_api) { echo " selected"; } }
 										echo ">";
-										echo "•••• ";
-										echo $value->txt . "</option>";
+										echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . $value->txt . "</option>";
+										$idApiParent4 = $value->id_api;
+										} else {
+											$idApiParent4 = $idApiParent3;
 										}
 									} 
 								}
