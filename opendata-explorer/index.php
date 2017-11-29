@@ -201,7 +201,7 @@ set_time_limit(0);
 						// Constructing other parameters taken directly from dataset with test data
 
 						if ($apikod == "liquidity") { //for newly added groups of datasets
-							$testDate = "20171001";
+							$testDate = "20171101";
 						} else {
 							$testDate = "20170701";
 						}
@@ -369,7 +369,7 @@ set_time_limit(0);
 						foreach ($sortArrayFinal as $key => $value) {
 							
 							$floatMoney = floatval($value->value);
-							$money = number_format($floatMoney, 2, ".", "");
+							$money = number_format($floatMoney, 0, ".", "");
 
 							$arrDataVis[] = array(
 								"label" => $value->dt,
@@ -396,6 +396,7 @@ set_time_limit(0);
 				foreach ($dataTzep as $key => $value) {
 					if ($tzepCode == strtoupper($value->tzep)) {
 						$tzepTxt = $value->txt;
+						$tzepDef = $value->def;
 					}
 				}
 				
@@ -407,13 +408,14 @@ set_time_limit(0);
 					$plotColor = "#900C3F";
 				}
 				
+				
 
 				$myChart = new FusionCharts($chartType, "myChartContainer", "100%", "90%", "myGreatChartContainer", "json",
 		            '{
 		                "chart": {
 		                    "caption": "' . $dataGroupName . '",
 		                    "subCaption": "' . $sortArrayFinal[0]->txt . '",
-		                    "xAxisName": "на дату",
+		                    "xAxisName": "дата",
 		                    "yAxisName": "' . $tzepTxt . '",
 		                    "numberPrefix": "",
 		                    "formatNumber": "0",
