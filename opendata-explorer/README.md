@@ -1,7 +1,8 @@
 Обновлено: 29.11.2017
 ___________________
 
-В целом, сервис OpenData API от НБУ удовлетворяет большинству требований для работы **Open Data Explorer** :metal:
+В целом, сервис OpenData API от НБУ удовлетворяет большинству требований 
+для работы **Open Data Explorer** :metal:
 
 1. Для создания формы запроса используются следующие ресурсы:
 
@@ -16,8 +17,6 @@ ___________________
     1.5. [Dimension/tzep](https://bank.gov.ua/NBUStatService/v1/statdirectory/dimension/tzep?json): уточняется перечень доступных единиц измерения.
 
 2. Сконструированная форма дает возможность отправить запрос на Statdirectory/{apikod} с использованием параметров freq=, start=, end=, {dimension}=, id_api= для отображения графика.
-
-См. [test.pdf](https://github.com/artemworks/nbu/blob/master/opendata-explorer/test.pdf) и test.php
 
 ___________________
 
