@@ -41,6 +41,10 @@
             right: 0;
             bottom: 0;
         }
+        .table-modern {
+            padding: 10px 50px 10px 50px;
+            text-align: center;
+        }
     </style>
     <!-- Developed by Artem Rumiantsev -->
     <script src="assets/js/jquery-3.2.1.slim.min.js"></script>

@@ -200,7 +200,13 @@ set_time_limit(0);
 
 						// Constructing other parameters taken directly from dataset with test data
 
-						$testDate = "20171101";
+						if ($apikod == "liquidity") { //for newly added groups of datasets
+							$testDate = "20171001";
+						} else {
+							$testDate = "20170701";
+						}
+						
+						
 						/* 
 						start= and end= working normally instead of date=
 						so we use them just to get additional params
@@ -241,7 +247,7 @@ set_time_limit(0);
 							echo "<option value=\"" . $idApiParent1 . "\"";
 							if ( isset($_GET["id_api"]) ) { if ($_GET["id_api"] == $value->id_api) { echo " selected"; } }
 							echo ">";
-							echo "<b>" . $value->txt . "</b></option>";
+							echo "<b>" . trim($value->txt) . "</b></option>";
 							
 							foreach ($dataSetContentModified[2] as $key => $value) {
 
@@ -249,7 +255,7 @@ set_time_limit(0);
 								echo "<option value=\"" . $value->id_api . "\"";
 								if ( isset($_GET["id_api"]) ) { if ($_GET["id_api"] == $value->id_api) { echo " selected"; } }
 								echo ">";
-								echo "&nbsp;&nbsp;" . $value->txt . "</option>";
+								echo "&nbsp;&nbsp;" . trim($value->txt) . "</option>";
 								$idApiParent2 = $value->id_api;
 								}  else {
 									$idApiParent2 = $idApiParent1;
@@ -262,7 +268,7 @@ set_time_limit(0);
 									echo "<option value=\"" . $value->id_api . "\"";
 									if ( isset($_GET["id_api"]) ) { if ($_GET["id_api"] == $value->id_api) { echo " selected"; } }
 									echo ">";
-									echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . $value->txt . "</option>";
+									echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . trim($value->txt) . "</option>";
 									$idApiParent3 = $value->id_api;
 									} else {
 										$idApiParent3 = $idApiParent2;
@@ -275,7 +281,7 @@ set_time_limit(0);
 										echo "<option value=\"" . $value->id_api . "\"";
 										if ( isset($_GET["id_api"]) ) { if ($_GET["id_api"] == $value->id_api) { echo " selected"; } }
 										echo ">";
-										echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . $value->txt . "</option>";
+										echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . trim($value->txt) . "</option>";
 										$idApiParent4 = $value->id_api;
 										} else {
 											$idApiParent4 = $idApiParent3;
@@ -377,38 +383,51 @@ set_time_limit(0);
 				$min = min($minVal);
 		        $max = max($minVal);
 
-		        $minValChart = $min - $min/1000;
-		        $maxValChart = $max + $max/1000;
+		        $minValChart = $min - $min/100;
+		        $maxValChart = $max + $max/100;
 
 		        $yAxisMinValue = number_format($minValChart, 0, ',', '');
 		        $yAxisMaxValue = number_format($maxValChart, 0, ',', '');
 
 		        // implementing tzep
-		        $tzep = $sortArrayFinal[0]->tzep;
+		        $tzepCode = strtoupper($sortArrayFinal[0]->tzep);
 				$urlTzep = $entryPoint . "/dimension/tzep?json";
 				$dataTzep = json_decode(file_get_contents($urlTzep));
 				foreach ($dataTzep as $key => $value) {
-					if ($tzep == $value->tzep) {
-						$tzep = $value->txt;
+					if ($tzepCode == strtoupper($value->tzep)) {
+						$tzepTxt = $value->txt;
 					}
 				}
+				
+				if ($tzepCode == "T080") {
+					$chartType = "column2d";
+					$plotColor = "#1E6B7F";
+				} else {
+					$chartType = "line";
+					$plotColor = "#900C3F";
+				}
+				
 
-				$myChart = new FusionCharts("line", "myChartContainer", "100%", "80%", "myGreatChartContainer", "json",
+				$myChart = new FusionCharts($chartType, "myChartContainer", "100%", "90%", "myGreatChartContainer", "json",
 		            '{
 		                "chart": {
 		                    "caption": "' . $dataGroupName . '",
 		                    "subCaption": "' . $sortArrayFinal[0]->txt . '",
 		                    "xAxisName": "на дату",
-		                    "yAxisName": "' . $tzep . '",
+		                    "yAxisName": "' . $tzepTxt . '",
 		                    "numberPrefix": "",
 		                    "formatNumber": "0",
 		                    "formatNumberScale": "0",
-		                    "paletteColors": "#903749, #6A2C70",
+		                    "paletteColors": "' . $plotColor . '",
+		                    "divlineColor": "#999999",
+        					"divLineDashed": "1",
 		                    "bgColor": "#FCFCFC",
 		                    "canvasBgAlpha": "0",
-		                    "borderAlpha": "5",
+		                    "borderAlpha": "20",
+		                    "usePlotGradientColor": "0",
 		                    "canvasBorderAlpha": "0",
 		                    "showBorder": "0",
+		                    "showPlotBorder": "0",
 		                    "use3DLighting": "0",
 		                    "yAxisMinValue": "' . $yAxisMinValue  . '",
                     		"yAxisMaxValue": "' . $yAxisMaxValue  . '",
@@ -475,10 +494,11 @@ set_time_limit(0);
 					  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 				';
 
-						echo "<h5>" . $dataGroupName . "</h5>";
-						echo "<h6>" . $sortArrayFinal[0]->txt . ", (" . $tzep . ")</h6>";
+						echo "<center><h5>" . $dataGroupName . "</h5>";
+						echo "<h6>" . $sortArrayFinal[0]->txt . "</h6>";
+						echo "<p>" . $tzepTxt . "</p></center>";
 
-						echo "<table class=\"table\">";
+						echo "<div class=\"table-modern\"><table class=\"table\">";
 
 						foreach ($sortArrayFinal as $key => $value) {
 
@@ -488,7 +508,7 @@ set_time_limit(0);
 							echo "</tr>";
 						}
 
-						echo "</table>";
+						echo "</table></div>";
 				
 				echo '	
 					</div>
