@@ -357,11 +357,12 @@ set_time_limit(0);
 							$sortArray = null;
 
 							$numItemsInSortArrayFinal = count($sortArrayFinal);
+							
 							if ($numItemsInSortArrayFinal>10) { $labelDisplay = 'rotate'; } else { $labelDisplay = 'wrap'; }
 
 						foreach ($sortArrayFinal as $key => $value) {
 							
-							$floatMoney = floatval(($value->value)/1000);
+							$floatMoney = floatval($value->value);
 							$money = number_format($floatMoney, 2, ".", "");
 
 							$arrDataVis[] = array(
@@ -376,12 +377,21 @@ set_time_limit(0);
 				$min = min($minVal);
 		        $max = max($minVal);
 
-		        $minValChart = $min - $min/100;
-		        $maxValChart = $max + $max/100;
+		        $minValChart = $min - $min/1000;
+		        $maxValChart = $max + $max/1000;
 
 		        $yAxisMinValue = number_format($minValChart, 0, ',', '');
 		        $yAxisMaxValue = number_format($maxValChart, 0, ',', '');
 
+		        // implementing tzep
+		        $tzep = $sortArrayFinal[0]->tzep;
+				$urlTzep = $entryPoint . "/dimension/tzep?json";
+				$dataTzep = json_decode(file_get_contents($urlTzep));
+				foreach ($dataTzep as $key => $value) {
+					if ($tzep == $value->tzep) {
+						$tzep = $value->txt;
+					}
+				}
 
 				$myChart = new FusionCharts("line", "myChartContainer", "100%", "80%", "myGreatChartContainer", "json",
 		            '{
@@ -389,7 +399,7 @@ set_time_limit(0);
 		                    "caption": "' . $dataGroupName . '",
 		                    "subCaption": "' . $sortArrayFinal[0]->txt . '",
 		                    "xAxisName": "на дату",
-		                    "yAxisName": "в млрд. гривен",
+		                    "yAxisName": "' . $tzep . '",
 		                    "numberPrefix": "",
 		                    "formatNumber": "0",
 		                    "formatNumberScale": "0",
@@ -466,7 +476,7 @@ set_time_limit(0);
 				';
 
 						echo "<h5>" . $dataGroupName . "</h5>";
-						echo "<h6>" . $sortArrayFinal[0]->txt . "</h6>";
+						echo "<h6>" . $sortArrayFinal[0]->txt . ", (" . $tzep . ")</h6>";
 
 						echo "<table class=\"table\">";
 
@@ -474,7 +484,7 @@ set_time_limit(0);
 
 							echo "<tr>";
 								echo "<td>" . $value->dt . "</td>";
-								echo "<td>" . number_format($value->value, 2, ',', ' ') . "</td>";
+								echo "<td>" . number_format($value->value, 0, ',', ' ') . "</td>";
 							echo "</tr>";
 						}
 
