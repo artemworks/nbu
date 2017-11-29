@@ -1,19 +1,19 @@
 Обновлено: 29.11.2017
 ___________________
 
-В целом, сервис /NBUStatService/v1/ удовлетворяет большинству требований для работы **Open Data Explorer** :metal:
+В целом, сервис OpenData API от НБУ удовлетворяет большинству требований для работы **Open Data Explorer** :metal:
 
 1. Для создания формы запроса используются следующие ресурсы:
 
     1.1. [Statdirectory](https://bank.gov.ua/NBUStatService/v1/statdirectory/?json): уточняются все группы наборов данных, а также их доступность по интервалам (periods), разрезам (dimensions) и дате ввода (entrydate).
 
-    1.2. Statdirectory/{apikod}: уточняются все доступные наборы данных; для получения точного списка с {id_api} необходимо уточнять запрос с датами start= и end=, а также leveli= и parent= для правильного вывода иерархического дерева.
+    1.2. Statdirectory/{apikod}: уточняются все доступные наборы данных внутри группы; для получения точного списка с {id_api} необходимо уточнять запрос с датами start= и end=, а также leveli= и parent= для правильного вывода иерархического дерева.
 
-    1.3. Dimension: уточняется название разреза по ранее полученному коду из Statdirectory.
+    1.3. [Dimension](https://bank.gov.ua/NBUStatService/v1/statdirectory/dimension?json): уточняется название разреза по ранее полученному коду из Statdirectory.
 
     1.4. Dimension/{dimension}: уточняется перечень доступных опций внутри определенного разреза.
 
-    1.5. Dimension/{tzep}: уточняется перечень доступных единиц измерения.
+    1.5. [Dimension/tzep](https://bank.gov.ua/NBUStatService/v1/statdirectory/dimension/tzep?json): уточняется перечень доступных единиц измерения.
 
 2. Сконструированная форма дает возможность отправить запрос на Statdirectory/{apikod} с использованием параметров freq=, start=, end=, {dimension}=, id_api= для отображения графика.
 
