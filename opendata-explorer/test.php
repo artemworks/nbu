@@ -1,3 +1,9 @@
+<?php
+@ini_set('zlib.output_compression', 0);
+@ini_set('implicit_flush', 1);
+@ob_end_clean();
+set_time_limit(0);
+?>
 <?php ini_set('display_errors', '1');  ?>
 <?php require_once("includes/layout/header.php"); ?>
 <div class="col-md-12">
@@ -12,7 +18,6 @@
 			<td>Machine Name</td>
 			<td>Periods (freq)</td>
 			<td>Availability</td>
-			<td>date=</td>
 			<td>start=, end=</td>
 			<td>freq=</td>
 			<td>leveli=1</td>
@@ -31,22 +36,18 @@
 			$urlDataset = $statDirectory . $value->apikod;
 			$urlHeadersResponse = get_headers($urlDataset . "?json")[0];
 
-			// date=
-			$urlDatasetDate = $urlDataset . "?date=201707";
-			$urlHeadersResponseDate = get_headers($urlDatasetDate . "?json")[0];
-
 			// start= & end=
 			$urlDatasetStartDate = $urlDataset . "?start=20170401&end=20170701";
-			$urlHeadersResponseStartDate = get_headers($urlDatasetStartDate . "?json")[0];
+			$urlHeadersResponseStartDate = get_headers($urlDatasetStartDate . "&json")[0];
 
 			// freq=
 			$arrFreq = explode(",", $value->periods);
-			$urlDatasetFreq = $urlDatasetStartDate . "freq=" . $arrFreq[0];
-			$urlHeadersResponseFreq = get_headers($urlDatasetStartDate . "?json")[0];
+			$urlDatasetFreq = $urlDatasetStartDate . "&freq=" . $arrFreq[0];
+			$urlHeadersResponseFreq = get_headers($urlDatasetStartDate . "&json")[0];
 
 			// leveli=1
-			$urlDatasetLeveli = $urlDatasetFreq . "leveli=1";
-			$urlHeadersResponseLeveli = get_headers($urlDatasetLeveli . "?json")[0];
+			$urlDatasetLeveli = $urlDatasetStartDate . "&leveli=1";
+			$urlHeadersResponseLeveli = get_headers($urlDatasetLeveli . "&json")[0];
 
 
 			echo "<tr>";
@@ -60,10 +61,6 @@
 				 else { echo '<i class="fa fa-times" aria-hidden="true"></i>'; }
 			echo "</td>";
 
-			echo "<td>";
-				 if ($urlHeadersResponseDate === "HTTP/1.1 200 OK") { echo '<i class="fa fa-check" aria-hidden="true"></i>'; } 
-				 else { echo '<i class="fa fa-times" aria-hidden="true"></i>'; }
-			echo "</td>";
 
 			echo "<td>";
 				 if ($urlHeadersResponseStartDate === "HTTP/1.1 200 OK") { echo '<i class="fa fa-check" aria-hidden="true"></i>'; } 
