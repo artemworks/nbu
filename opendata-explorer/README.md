@@ -42,6 +42,15 @@ ___________________
 
 ___________________
 
+To Do List по приложению:
+
+1. Session implementation.
+2. Cashing implementation.
+3. Code refactoring.
+4. Minor updates that depend on APIs improvements.
+
+___________________
+
 Скриншоты приложения: :+1:
 
 ![Alt text](/opendata-explorer/ss/01.png?raw=true "Грошові агрегати - M1 - Усі сектори - Графік")
