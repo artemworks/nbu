@@ -47,7 +47,7 @@ To Do List по приложению:
 1. Session implementation.
 2. Cashing implementation.
 3. Code refactoring.
-4. Minor updates that depend on APIs improvements.
+4. Minor updates that depend on APIs improvement.
 
 ___________________
 
