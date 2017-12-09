@@ -56,11 +56,13 @@ $status = Array(
 	"Нормальний"
 	);
 
-$testUrl = $nbuServiceUrl . "?typ=0";
+// $testUrl = $nbuServiceUrl . "?typ=0";
 
 // https://maps.googleapis.com/maps/api/geocode/json?language=uk&address=вул.Чорновола,27,Рівне&key=AIzaSyC65ozaddoqEKT5Kdi7GSzz-G4Uz7ekDIE
 
-$banks = simplexml_load_string(file_get_contents($testUrl));
+// Use $testUrl
+
+$banks = simplexml_load_string(file_get_contents(__DIR__."/cache/sample.xml"));
 
 $_SESSION["geobank"] = Array();
 
@@ -144,33 +146,25 @@ foreach ($banks->ROW as $bank) {
           
           var bank = banks[i];
 
-	      var marker = new google.maps.Marker({
+	      let marker = new google.maps.Marker({
 	          position: {lat: bank[1], lng: bank[2]},
 	          map: map,
 	          title: bank[0],
-	          animation: google.maps.Animation.DROP,
-			  contentString = '<div id="content">'+
-			      '<div id="siteNotice">'+
-			      '</div>'+
-			      '<h1 id="firstHeading" class="firstHeading">'+bank[0]+'</h1>'+
-			      '<div id="bodyContent">'+
-			      '<p>' +
-			      '</p></div>'+
-			      '</div>';
-
-			  infowindow = new google.maps.InfoWindow({
-			    content: contentString
-			  });
-
+	          animation: google.maps.Animation.DROP
 	       });
 
-        };
+		    let infowindow = new google.maps.InfoWindow({
+		      content: bank[0],
+		      maxWidth: 160
+		    });
+
+			marker.addListener('click', function() {
+		      infowindow.open(map, marker);
+		    });
+
+        }; 
 
         marker.addListener('click', toggleBounce);
-	  	
-	  	marker.addListener('click', function() {
-	    	infowindow.open(map, marker);
-	  	});
 
       }
 	
