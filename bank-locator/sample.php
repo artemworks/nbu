@@ -4,8 +4,11 @@ session_start();
 
 $nbuServiceUrl = "https://bank.gov.ua/NBU_BankInfo/get_data_branch";
 
-$googleApiKey = "AIzaSyC65ozaddoqEKT5Kdi7GSzz-G4Uz7ekDIE";
-$googleGeocodeUrl = "https://maps.googleapis.com/maps/api/geocode/json?&language=uk&key=" . $googleApiKey . "&address=";
+// Use one of this
+$googleApiKey1 = "AIzaSyC65ozaddoqEKT5Kdi7GSzz-G4Uz7ekDIE";
+$googleApiKey2 = "AIzaSyDuDdSUa9l1nrtNUVkuXxEE6TN4dd-nKjo";
+
+$googleGeocodeUrl = "https://maps.googleapis.com/maps/api/geocode/json?&language=uk&key=" . $googleApiKey2 . "&address=";
 
 // Available params: glmfo and typ https://bank.gov.ua/NBU_BankInfo/get_data_branch?typ=0
 
@@ -92,12 +95,14 @@ foreach ($banks->ROW as $bank) {
 			foreach ($geo["results"] as $result) {
 				$bankLat = $result["geometry"]["location"]["lat"];
 				$bankLng = $result["geometry"]["location"]["lng"];
+				$formatted_address = $result["formatted_address"];
 			}
 
 			$_SESSION["geobank"][] = Array(
 			$bankName,
 			$bankLat,
-			$bankLng
+			$bankLng,
+			$formatted_address
 					);
 		}
 	}
@@ -153,9 +158,18 @@ foreach ($banks->ROW as $bank) {
 	          animation: google.maps.Animation.DROP
 	       });
 
+			let contentString = '<div id="content">'+
+			      '<div id="siteNotice">'+
+			      '</div>'+
+			      '<h4 id="firstHeading" class="firstHeading">'+bank[0]+'</h4>'+
+			      '<div id="bodyContent">'+
+			      '<p>Адреса: '+bank[3]+'</p>'+
+			      '</div>'+
+			      '</div>';
+
 		    let infowindow = new google.maps.InfoWindow({
-		      content: bank[0],
-		      maxWidth: 160
+		      content: contentString,
+		      maxWidth: 250
 		    });
 
 			marker.addListener('click', function() {
@@ -177,7 +191,7 @@ foreach ($banks->ROW as $bank) {
 		}
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=<?= $googleApiKey ?>&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?= $googleApiKey2 ?>&callback=initMap"
     async defer></script>
   </body>
 </html>
