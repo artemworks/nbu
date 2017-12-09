@@ -103,7 +103,7 @@ foreach ($banks->ROW as $bank) {
 			$bankLat,
 			$bankLng,
 			$formatted_address
-					);
+			);
 		}
 	}
 }
