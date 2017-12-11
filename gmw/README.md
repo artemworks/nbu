@@ -1,0 +1,1 @@
+[DEMO](http://globalmoneyweek.bank.gov.ua/ "DEMO")

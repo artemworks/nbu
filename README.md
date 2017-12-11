@@ -1,1 +1,1 @@
-A set of Projects created on demand of NBU
+A set of Projects made on demand of NBU
