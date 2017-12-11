@@ -1,0 +1,94 @@
+.supershare {
+  font-family: 'Roboto', sans-serif;
+  padding: 2px 2px;
+  overflow: hidden;
+}
+
+.supershare .button {
+    position: relative;
+    display: inline-block;
+    height: 26px;
+    margin: 0 5px;
+    overflow: hidden;
+    width: 60px;
+    border-radius: 5px;
+}
+
+.supershare .icon {
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    vertical-align: top;
+    width: 28px;
+    text-align: center;
+}
+
+.supershare .icon i {
+    color: #fff;
+    line-height: 27px;
+}
+
+.supershare .mobile {
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    vertical-align: top;
+    width: 100%;
+    text-align: center;
+}
+
+.supershare .mobile i {
+    color: #fff;
+    line-height: 27px;
+}
+
+.supershare .counter {
+    z-index: 2;
+    display: block;
+    margin: 0;
+    height: 100%;
+    left: 20px;
+    position: absolute;
+    width: 50px
+}
+
+.supershare .counter p {
+    font-weight: 400;
+    color: #fff;
+    font-size: 12px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 6px;
+    width: 100%;
+}
+
+.supershare a {
+  color:#fff;
+  text-decoration:none;
+}
+
+.supershare .facebook .icon,
+.supershare .facebook .counter {
+  background-color: #6C7A89;
+}
+
+.supershare .google .icon,
+.supershare .google .counter {
+  background-color: #6C7A89;
+}
+
+.supershare .linkedin .icon,
+.supershare .linkedin .counter {
+  background-color: #6C7A89;
+}
+
+.supershare .twitter .mobile {
+  background-color: #6C7A89;
+}
+

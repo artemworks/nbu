@@ -1,0 +1,215 @@
+html, body, div, h1, h2, h3, p, button {
+	font-family: 'Roboto', sans-serif;
+}
+
+.btn-sm {
+	white-space: normal;
+}
+
+.next-year {
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+div.first {
+	text-align: center;
+	padding-bottom: 3rem;
+}
+
+div.second {
+	padding-top: 15rem;
+}
+
+div.gallery {
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+	background-color: #E4F9F5;
+}
+
+div.location {
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+	background-color: #E2EFF1;
+}
+
+div.soc {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  background-color: #fff;
+}
+
+div.agenda {
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+	background-color: #fff;
+}
+
+div.counter {
+	text-align: center;
+	background-color: #FCE38A;
+	margin-bottom: -200px;
+	border-radius: 10px;
+}
+
+div.gallery-nav {
+	padding-top: 2rem;
+}
+
+div.partners {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	background-color: #ECFFFB;
+}
+
+h1.title {
+	padding-top: 5rem;
+	color: #000000;
+}
+
+h3.s-title {
+	padding-top: 2rem;
+	color: #393E46;
+}
+
+h3.about-title {
+	text-align: center;
+}
+
+h3.gallery-title {
+	text-align: center;
+}
+
+h3.location-title {
+	text-align: center;
+}
+
+h3.partners-title {
+	text-align: center;
+}
+
+h3.agenda-title {
+	text-align: center;
+}
+
+p.sub-title {
+	padding: 2rem 0 1rem 0;
+}
+
+p.about-text {
+	padding: 2rem 0 1rem 0;
+}
+
+.agenda-row {
+	padding: 1rem 0 1rem 0;
+}
+
+p.counter-title {
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+}
+
+p.date {
+	padding-top: 2rem;
+}
+
+h4.counter-title-numbers {
+	padding-top: 0rem;
+}
+
+div.cover {
+	display: block;
+	position: relative;
+	padding-bottom: 5rem;
+}
+
+div.cover::after {
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: top;
+  opacity: 0.45;
+  content: "";
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    position: relative;
+    left: 25%;
+  }
+}
+
+button.navbar-toggler {
+	margin-top: 5%;
+}
+
+.tab-content {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.video-sec {
+	padding-top: 1rem;
+}
+
+.location-cols {
+	padding-top: 2rem;
+}
+
+i.fa-map-marker, i.fa-clock-o {
+	color: #F08A5D;
+}
+
+.pho {
+  padding: 10px 10px 10px 10px;
+}
+
+.flickr {
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+
+
+footer {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 40px 0 40px 0;
+  background: #444F5A;
+  color: #ffffff; }
+  footer .top-arrow {
+    text-align: right;
+    padding: 20px 20px 20px 20px; }
+    footer .top-arrow a {
+      color: #ffffff;
+      text-decoration: none; }
+  footer .top-arrow-copy {
+    text-align: left;
+    padding: 20px 20px 20px 20px; }
+    footer .top-arrow-copy a {
+      color: #ffffff;
+      text-decoration: none; }
+  footer .top-arrow-social {
+    text-align: left;
+    padding: 20px 20px 20px 20px; }
+    footer .top-arrow-social a {
+      color: #ffffff;
+      text-decoration: none;
+      padding-right: 20px; }
+    footer .top-arrow-social .item {
+      padding: 10px 10px 10px 10px;
+      font-size: 14px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      float: left;
+      margin: 0px 10px 10px 0px;
+      text-align: center;
+      min-width: 110px;
+      min-height: 15px;
+      text-transform: uppercase; }
+    footer .top-arrow-social .item i, footer .top-arrow-social #wrapper .item .count {
+      font-size: 16px;
+      padding-right: 15px; }
