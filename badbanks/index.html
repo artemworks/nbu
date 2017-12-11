@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Зрозуміти та відпустити: причини та результати «великого банківського очищення»</title>
+	<link rel="stylesheet" href="assets/css/badbanks20170206c.min.css">
+	<link rel="stylesheet" href="assets/css/share.css">
+	<script src="assets/charts/js/fusioncharts.js"></script>
+	<script src="assets/charts/js/themes/fusioncharts.theme.fint.js"></script>
+
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/images/icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="assets/images/icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="assets/images/icon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="assets/images/icon/manifest.json">
+	<link rel="mask-icon" href="assets/images/icon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<script src="assets/js/handlebars.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-26514971-6', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+	<style type="text/css">
+
+	  table {
+	    font-size: 10px;
+	  }
+	  .bank-panel {
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    border-bottom: 1px solid black;
+	    background-color: #ffffff;
+	  }
+	  .panel-top {
+	    background-color: #F2F2F2;
+	  }
+	  .card {
+	    border: 1px solid black;
+	    padding: 20px 20px 20px 20px;
+	    background-color: #F0FFF3;
+	  }
+	  p.f-nbu {
+	    padding-top: 20px;
+	    padding-bottom: 20px;
+	  }
+	  p.name {
+	    font-size: 20px;
+	    padding-top: 15px;
+	  }
+	  div.reas {
+	    font-size: 30px;
+	    padding-top: 7px;
+	  }
+
+	  div.nav-reas-left {
+	    float: left;
+	  }
+
+	  div.nav-reas-right {
+	    float: right;
+	  }
+
+	  div.nav-reas-left,
+	  div.nav-reas-right {
+	  	font-size: 3.0vh;
+	  }
+
+	  div.nav-reas-left, 
+	  div.nav-reas-right {
+	  	padding: 0 5px 15px 0;
+	  }
+
+	  div.nav-reas-left a:hover, 
+	  div.nav-reas-right a:hover {
+	  	color: #E84A5F;
+	  }
+
+	  img.o-image{
+    	border-radius: 50%;
+  	  }
+  	  i.i-big {
+  	  	font-size: 42px;
+  	  	color: #2E94B9;
+  	  }
+  	  div.s-cent {
+  	  	padding-top: 30px;
+  	  	text-align: center;
+  	  }
+
+	@font-face {
+	  font-family: "first";
+	  src: url("assets/fonts/first.eot");
+	  src: url("assets/fonts/first.eot?#iefix") format("embedded-opentype"),
+	       url("assets/fonts/first.woff") format("woff"),
+	       url("assets/fonts/first.ttf") format("truetype"),
+	       url("assets/fonts/first.svg#Flaticon") format("svg");
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	  @font-face {
+	    font-family: "first";
+	    src: url("assets/fonts/first.svg#Flaticon") format("svg");
+	  }
+	}
+
+	[class^="first-"]:before, [class*=" first-"]:before,
+	[class^="first-"]:after, [class*=" first-"]:after {   
+	  font-family: first;
+	  font-style: normal;
+	  margin-left: 10px;
+	  margin-right: 10px;
+	}
+
+	.first-interface:before { content: "\f100"; }
+	.first-medical-graphic-with-descendant-line:before { content: "\f101"; }
+	.first-open-book-top-view:before { content: "\f102"; }
+	.first-people:before { content: "\f103"; }
+	.first-people-1:before { content: "\f104"; }
+	.first-top-games-star:before { content: "\f105"; }
+	.first-transport:before { content: "\f106"; }
+	.first-withdraw-of-a-safe-box:before { content: "\f107"; }
+
+
+	@media only screen and (max-width: 414px) {
+		header p.headline { padding-top: 40px; font-size: 20px; line-height: 20px; }
+		header h1 { font-size: 30px; line-height: 30px; }
+		header h2 { font-size: 16px; line-height: 16px; }
+		div.quote-one {padding: 0 100px 0 0;}
+		div.quote-one p.headline { padding-top: 70px; font-size: 25px; line-height: 25px; }
+		div.quote-one p.speaker { padding-top: 40px; font-size: 12px; line-height: 12px; }
+		div.quote-two { padding: 0 10px 0 10px; }
+		div.quote-two p.headline { padding-top: 20px; font-size: 25px; line-height: 25px; }
+		div.quote-two p.speaker { padding-top: 160px; font-size: 12px; line-height: 12px; }
+		div.second p, div.seventh ul li, div.eighth p { font-size: 18px; }
+		div.sixth p { padding-top: 20px; font-size: 14px; }
+		}
+
+	</style>
+
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="http://badbanks.bank.gov.ua">
+
+
+	<meta property="og:url" content="http://badbanks.bank.gov.ua" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Причини і результати «великого банківського очищення»" />
+	<meta property="og:site_name" content="Спецпроект про ліквідацію проблемних банків" />
+	<meta property="og:description" content="Чому очищення було неминучим, навіщо було виводити 87 банків і до чого це призвело - у спецпроекті Національного банку України" />
+    <meta name="description" content="Чому очищення було неминучим, навіщо було виводити 87 банків і до чого це призвело - у спецпроекті Національного банку України">
+	<meta property="og:image" content="assets/images/social-media.png" />
+
+	<script src="assets/js/share.min.js"></script>
+
+</head>
+<body id="main">
+
+<script>
+    $(function() {
+    
+        $(".share-buttons").supershare({
+            google : true,
+            facebook : true,
+            linkedin : true,
+            twitter : true
+        });
+        
+    });
+</script>
+
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="#intro">Вступ</a>
+	  <a href="#structure">Структура та «бізнес-моделі» виведених банків</a>
+	  <a href="#outlawed">Поза законом: виведені з ринку банки</a>
+	  <a href="#timeline">Таймлайн: Динаміка виведення банків з ринку</a>
+	  <a href="#formula">Очищення банківського сектору</a>
+	  <a href="#results">Результати</a>
+	  <a href="#crime-and-sentence">Злочини та покарання</a>
+	</div>
+
+	<div class="container hidden-xs">
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-4"></div>
+			<div class="logo-nbu col-md-4 col-sm-4 col-xs-4">
+				<img src="assets/images/logo.png" border="0">
+			</div>
+			<div class="menu-button col-md-4 col-sm-4 col-xs-4">
+				<span style="cursor:pointer" onclick="openNav()"><i id="nav-button" class="fa fa-bars fa-3x" aria-hidden="true"></i></span>
+			</div>
+		</div>
+	</div>
+
+	<header>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<p class="headline">
+						Зрозуміти та відпустити:
+					</p>
+					<h1>
+						Причини і результати «великого банківського очищення»
+					</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="s-cent col-md-12 col-xs-12">
+					<p class="share-buttons" data-supershare="http://badbanks.bank.gov.ua">
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<h2>
+						Спецпроект
+					</h2>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<div class="second container" id="intro">
+		<div class="row">
+			<div class="col-md-12 col-xs-12">
+				<p>Три роки тому, на початку 2014, в Україні було 180 банків. Більшість із них не розкривали реальних власників, а звітність не відображала реального стану справ. Навіть аудиторські висновки не гарантували об’єктивної оцінки. На ринку активно <a href="#classification">працювали</a> «банки-пральні», «пилососи», «зомбі-банки» та створені для вигідного продажу «бебі-бумери». Усі вони де-факто вже були банкротами, проте підтримувались на «штучному диханні».</p>
+     			<p>Вплив глобальних економічних дисбалансів, скрутні часи руйнівної кризи, початок кривавої війни на Донбасі  - це чинники, що оголили всі накопичені проблеми української банківської системи.</p>
+     			<p>Деякі банки почали відмовлятись повертати гроші і українцям, і регуляторові. Інші – вже були не в змозі виконувати нормативи та вимоги Національного банку. Були й такі, що залишились без підтримки акціонерів, які просто втекли від проблем та зобов'язань перед вкладниками. Декілька банків опинились на захопленій зовнішнім агресором території...</p>
+				<p>Чому очищення було неминучим, навіщо було виводити 92 банки і до чого це призвело – у нашому інформаційному проекті.</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="third container" id="structure">
+		<div class="row">
+			<div class="col-md-12">
+				
+				<div class="row">
+					<div class="com-md-12">
+						<h3>Структура та «бізнес-моделі» виведених банків</h3>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+				<div class="chart-box row">
+
+					<div class="chart col-md-4">
+						<div id="chart-1">
+							<script type="text/javascript">
+				            FusionCharts.ready(function () {
+				                new FusionCharts({"type":"doughnut2d","id":"myFirstChart","width":"100%","height":400,"renderAt":"chart-1","dataFormat":"json","dataSource":{
+							    "chart": {
+							        "subCaption": "За бізнесом",
+							        "paletteColors": "#E3CE8B,#F08A5D,#B83B5E,#6A2C70",
+							        "bgColor": "#EAEAEA",
+							        "showBorder": "0",
+							        "use3DLighting": "0",
+							        "showShadow": "0",
+							        "enableSmartLabels": "0",
+							        "startingAngle": "310",
+							        "showLabels": "0",
+							        "showPercentValues": "1",
+							        "labelDistance": "-10",
+							        "showLegend": "1",
+							        "legendShadow": "0",
+							        "legendBorderAlpha": "0",
+							        "showTooltip": "1",
+							        "showPercentInToolTip": "0",
+							        "decimals": "0",
+							        "captionFontSize": "14",
+							        "subcaptionFontSize": "14",
+							        "subcaptionFontBold": "0",
+							        "useDataPlotColorForLabels": "1"
+							    },
+							    "data": [
+							        {
+							            "label": "Корпоративні",
+							            "value": "30"
+							        },
+							        {
+							            "label": "Універсальні",
+							            "value": "54"
+							        },
+							        {
+							            "label": "Роздрібні",
+							            "value": "3"
+							        }
+							    ]
+							}
+							});
+				            });
+				        	</script>
+					        <script type="text/javascript">
+					            FusionCharts.ready(function () {
+					                FusionCharts("myFirstChart").render();
+					            });
+					        </script>
+						</div>
+					</div>
+
+					<div class="chart col-md-4">
+						<div id="chart-2">
+							<script type="text/javascript">
+				            FusionCharts.ready(function () {
+				                new FusionCharts({"type":"doughnut2d","id":"mySecondChart","width":"100%","height":500,"renderAt":"chart-2","dataFormat":"json","dataSource":{
+							    "chart": {
+							        "subCaption": "За власником",
+							        "paletteColors": "#F73859,#252A34,#FF895D,#9E7E44,#364F6B,#3FC1C9,#FCE38A,#FC5185",
+							        "bgColor": "#EAEAEA",
+							        "showBorder": "0",
+							        "use3DLighting": "0",
+							        "showShadow": "0",
+							        "enableSmartLabels": "0",
+							        "startingAngle": "310",
+							        "showLabels": "0",
+							        "labelDistance": "-20",
+							        "showPercentValues": "1",
+							        "showLegend": "1",
+							        "legendShadow": "0",
+							        "legendBorderAlpha": "0",
+							        "showTooltip": "1",
+							        "showPercentInToolTip": "0",
+							        "decimals": "0",
+							        "captionFontSize": "14",
+							        "subcaptionFontSize": "14",
+							        "subcaptionFontBold": "0",
+							        "useDataPlotColorForLabels": "1"
+							    },
+							    "data": [
+							        {
+							            "label": "Політичні діячі",
+							            "value": "14"
+							        },
+							        {
+							            "label": "Сім'я",
+							            "value": "18"
+							        },
+							        {
+							            "label": "Екс-чиновники",
+							            "value": "6"
+							        },
+							        {
+							            "label": "Олігархи",
+							            "value": "8"
+							        },
+							        {
+							            "label": "Авантюристи",
+							            "value": "4"
+							        },
+							        {
+							            "label": "Бізнеси",
+							            "value": "28"
+							        },
+							        {
+							            "label": "Держава",
+							            "value": "3"
+							        },
+							        {
+							            "label": "Не ідентифіковано",
+							            "value": "6"
+							        }
+							    ]
+							}
+							});
+				            });
+				        	</script>
+					        <script type="text/javascript">
+					            FusionCharts.ready(function () {
+					                FusionCharts("mySecondChart").render();
+					            });
+					        </script>
+						</div>
+					</div>
+
+					<div class="chart col-md-4">
+						<div id="chart-3">
+							<script type="text/javascript">
+				            FusionCharts.ready(function () {
+				                new FusionCharts({"type":"doughnut2d","id":"myThirdChart","width":"100%","height":400,"renderAt":"chart-3","dataFormat":"json","dataSource":{
+							    "chart": {
+							        "subCaption": "За розміром",
+							        "paletteColors": "#48466D,#3D84A8,#46CDCF,#FF895D",
+							        "bgColor": "#EAEAEA",
+							        "showBorder": "0",
+							        "use3DLighting": "0",
+							        "showShadow": "0",
+							        "enableSmartLabels": "0",
+							        "startingAngle": "310",
+							        "showLabels": "0",
+							        "labelDistance": "-10",
+							        "showPercentValues": "1",
+							        "showLegend": "1",
+							        "legendShadow": "0",
+							        "legendBorderAlpha": "0",
+							        "showTooltip": "1",
+							        "showPercentInToolTip": "0",
+							        "decimals": "0",
+							        "captionFontSize": "14",
+							        "subcaptionFontSize": "14",
+							        "subcaptionFontBold": "0",
+							        "useDataPlotColorForLabels": "1"
+							    },
+							    "data": [
+							        {
+							            "label": "Малі",
+							            "value": "59"
+							        },
+							        {
+							            "label": "Середні",
+							            "value": "12"
+							        },
+							        {
+							            "label": "Великі",
+							            "value": "13"
+							        },
+							        {
+							            "label": "Найбільші",
+							            "value": "3"
+							        }
+							    ]
+							}
+							});
+				            });
+				        	</script>
+					        <script type="text/javascript">
+					            FusionCharts.ready(function () {
+					                FusionCharts("myThirdChart").render();
+					            });
+					        </script>
+						</div>
+					</div>
+
+
+				</div>
+</div>
+
+	<div class="sixth container-fluid" id="classification">
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="banks-people-reasons-r row">
+					<div class="col-md-1"></div>
+					<div class="banks-people-reasons-c col-md-10">
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="icon-top col-md-3 col-xs-3"><i class="icoo-cleaning"></i></div>
+									<div class="col-md-9 col-xs-9"><p><b>Пральня</b> - банк, який  займається  відмиванням грошей шляхом здійснення схемних операцій.  Такий банк конвертує безготівкові кошти у готівку, що в народі називають    «обналом». Нерідко операції з «обналу» проводяться на мільйони чи навіть мільярди гривень. Така діяльність банку призводить до зменшення податкового навантаження на бізнес та розкрадання державних коштів.</p></div>
+								</div>
+								<div class="icontop row">
+									<div class="icon-top col-md-3 col-xs-3"><i class="shem-vacuum-cleaner"></i></div>
+									<div class="col-md-9 col-xs-9"><p><b>Пилосос</b> - банк, який збирає кошти вкладників та фінансує ними інші бізнес-проекти власника банку чи його родичів. Нерідко такі банківські установи працюють як класичні фінансові піраміди та виплачують отримані від останніх вкладників гроші клієнтам, які відкрили депозити раніше. Шанси отримати свої депозити в такому банку є далеко не у всіх вкладників.</p></div>
+								</div>
+								<div class="icontop row">
+									<div class="icon-top col-md-3 col-xs-3"><i class="icoo-horror"></i></div>
+									<div class="col-md-9 col-xs-9"><p><b>Зомбі-банк</b> - банк, закритий регулятором через структурні проблеми, які накопичилися в ньому головним чином після кризи 2008-2009 рр. Ці проблеми не були вирішені протягом наступних років, тому банк весь цей час залишався швидше «мертвим», а ніж «живим». Суттєве поглиблення наявних проблем з початку кризи 2014 року стало причиною виведення банку з ринку.</p></div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="row">
+									<div class="icon-top col-md-3 col-xs-3"><i class="shem-pacifier"></i></div>
+									<div class="col-md-9 col-xs-9"><p><b>Бебі-бумер</b> - банк, створений в період «бебі-буму» 2010-2013 років. Створювався з метою подальшого перепродажу, діяльністю на ринку практично не займався. Тобто, банк, як у тій казці про красуню, «спав» та чекав на свого принца-інвестора. З початком кризи казка закінчилась: інвестори не з’явилися, а самостійно розвивати установу у власників не вистачило коштів чи бажання.</p></div>
+								</div>
+								<div class="icontop row">
+									<div class="icon-top col-md-3 col-xs-3"><i class="icoo-medical"></i></div>
+									<div class="col-md-9 col-xs-9"><p><b>Анексований</b> - банк, зареєстрований та працював на території Автономної Республіки Крим або зони АТО. Через агресію з боку Росії опинився на окупованих територіях, втратив активи, клієнтів, підтримку власника і не зміг через це залишатися у системі.</p></div>
+								</div>
+								<div class="icontop row">
+									<div class="icon-top col-md-3 col-xs-3"><i class="shem-dices"></i></i></div>
+									<div class="col-md-9 col-xs-9"><p><b>Азартний гравець</b> - банк з ризиковою бізнес-моделлю, який, як правило, вів агресивну в певних сегментах банківської діяльності політику, але не був готовий до кризи та різкого відтоку коштів. У таких банків зазвичай немає адекватних ресурсів для покриття втрат. Тому у періоди криз більшість «азартних гравців» не можуть виконати вимоги з капіталізації та залишають ринок.</p></div>
+								</div>						
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+<div class="quote-one">
+	<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="headline">
+						<i class="fa fa-quote-left" aria-hidden="true"></i> Банківська система була не просто хворою, банки працювали поза законом! <i class="fa fa-quote-right" aria-hidden="true"></i>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p class="speaker">
+						- Валерія Гонтарева, Голова НБУ, <br>під час виступу у Верховній Раді <br>05 лютого 2016 року
+					</p>
+				</div>
+			</div>
+	</div>
+</div>
+
+
+
+<div class="forth container-fluid" id="outlawed">
+
+	<div class="row">
+		<div class="forth-inside container">
+			<div class="col-md-8 col-xs-12">
+				<h3>
+					Поза законом: виведені з ринку банки
+				</h3>
+			</div>
+			<div class="col-md-2 col-xs-12">&nbsp;</div>
+			<div class="col-md-2 col-xs-12">
+				<div class="search input-group">
+			      <input id="searchbox" type="text" class="form-control" placeholder="Введіть назву банку"> 
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="banks-inside container">
+
+			<div class="row"><div class="col-md-12">
+			    <div class="nav-reas-left">
+			      <a href="#" role="button" id="top_stories"><span data-toggle='tooltip' data-placement='bottom' title='ТОП найбільш резонансних випадків'><i class="first-top-games-star"></i></span></a>
+			      <a href="#" role="button" id="reason_all"><span data-toggle='tooltip' data-placement='bottom' title='Всі банки'><i class="first-interface"></i></span></a> 
+			    </div>
+			    <div class="nav-reas-right">
+			      <a href="#" role="button" id="reason_1"><span data-toggle='tooltip' data-placement='bottom' title='Втрата капіталу (ліквідності)'><i class="first-medical-graphic-with-descendant-line"></i></span></a>
+			      <a href="#" role="button" id="reason_2"><span data-toggle='tooltip' data-placement='bottom' title='Фінмоніторинг/каса/шахрайство'><i class="first-people"></i></span></a>
+			      <a href="#" role="button" id="reason_3"><span data-toggle='tooltip' data-placement='bottom' title='Крим/АТО'><i class="first-transport"></i></span></a>
+			      <a href="#" role="button" id="reason_4"><span data-toggle='tooltip' data-placement='bottom' title='За рішенням власника'><i class="first-withdraw-of-a-safe-box"></i></span></a>
+			      <a href="#" role="button" id="reason_5"><span data-toggle='tooltip' data-placement='bottom' title='Незадовільна ділова репутація власників/ керівництва'><i class="first-people-1"></i></span></a>
+			    </div>
+			</div></div>
+
+
+
+			<div class="row"><div class="col-md-12" id="content"></div></div>
+
+
+    <script id="badbanks-template" type="text/x-handlebars-template">
+      {{#list banks}}
+      <div class='my-heading-class row bank-panel'>
+        <div class='col-md-4 col-xs-4'><p class="name">{{name}}</p></div>
+        <div class='col-md-4 col-xs-4'>{{transpOwner owner1_img owner1}} {{#if owner2_img}}<img class='o-image' src='{{owner2_img}}' data-toggle='tooltip' data-placement='top' title='{{owner2}}'>{{/if}}</div>
+        <div class='col-md-4 col-xs-4 reas'>{{reasonDisp_1}} {{reasonDisp_2}} {{reasonDisp_3}} {{reasonDisp_4}} {{reasonDisp_5}}</div>
+      </div>
+      <div class='my-content-class row card' style='display:none;'>
+        <div class='row'>
+          <div class='col-md-6'>
+            <p>Кінцевий власник істотної участі з найбільшою часткою/впливом: <a href="{{ownership_url}}" target="_blank">{{owner1}}</a></p>
+            <p>Власник з найбільшою часткою: <a href="{{ownership_url}}" target="_blank">{{owner2}}</a></p>
+            <p>Керівник: {{ceo}}</p>
+            {{#if date_insolvency}}<p>Дата віднесення до категорії неплатоспроможних: {{#if nbu_url_2}}<a href="{{nbu_url_2}}" target="_blank">{{/if}}{{date_insolvency}}{{#if nbu_url_2}}</a>{{/if}}</p>{{/if}}
+            <p>Дата початку ліквідації/ відкликання банківської ліцензії: {{#if nbu_url_1}}<a href="{{nbu_url_1}}" target="_blank">{{/if}}{{date_liquidation}}{{#if nbu_url_1}}</a>{{/if}}</p>
+          </div>
+          <div class='col-md-6'>
+            <p>Сума вкладів фізичних осіб: {{deposits}} млн. грн.</p>
+            <p>Cума можливого відшкодування ФГВФО: <a href="{{fund_url}}" target="_blank">{{fund_to_pay}} млн. грн.</a></p>
+            <p>Доля вкладників, що отримають компенсацію в повному обсязі: <a href="{{fund_url}}" target="_blank">{{deposits_coverage}}%</a></p>
+            <p>Кошти юридичних осіб: {{corporate_funds}} млн. грн.</p>
+            <p>Загальні активи: {{assets}} млн. грн.</p>
+            <p>Заборгованість по рефінансуванню: {{refinance}} млн. грн.</p>
+          </div>
+        </div>
+
+        {{#if text}}
+        <div class='row'>
+          <div class='col-md-12'>
+            <p class='text-left'><b>Коментар щодо виведення з ринку:</b></p>
+            <p><ul>{{{splitText text}}}</ul></p>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+      {{/list}}
+    </script>
+
+  <script type="text/javascript">
+
+    var source   = $("#badbanks-template").html();
+
+    var template = Handlebars.compile(source);
+
+
+    Handlebars.registerHelper('reasonDisp_1', function() {
+      if (this.reason_1 === 1) {
+        return new Handlebars.SafeString(
+          "<span data-toggle='tooltip' data-placement='top' title='Втрата капіталу (ліквідності)'><i class='first-medical-graphic-with-descendant-line'></i></span>"
+        );
+      }
+    });
+    Handlebars.registerHelper('reasonDisp_2', function() {
+      if (this.reason_2 === 1) {
+        return new Handlebars.SafeString(
+          "<span data-toggle='tooltip' data-placement='top' title='Фінмоніторинг/каса/шахрайство'><i class='first-people'></i></span>"
+        );
+      }
+    });
+    Handlebars.registerHelper('reasonDisp_3', function() {
+      if (this.reason_3 === 1) {
+        return new Handlebars.SafeString(
+          "<span data-toggle='tooltip' data-placement='top' title='Крим/АТО'><i class='first-transport'></i></span>"
+        );
+      }
+    });
+    Handlebars.registerHelper('reasonDisp_4', function() {
+      if (this.reason_4 === 1) {
+        return new Handlebars.SafeString(
+          "<span data-toggle='tooltip' data-placement='top' title='За рішенням власника'><i class='first-withdraw-of-a-safe-box'></i></span>"
+        );
+      }
+    });
+    Handlebars.registerHelper('reasonDisp_5', function() {
+      if (this.reason_5 === 1) {
+        return new Handlebars.SafeString(
+          "<span data-toggle='tooltip' data-placement='top' title='Незадовільна ділова репутація власників/ керівництва'><i class='first-people-1'></i></span>"
+        );
+      } else {
+
+      }
+    });
+    Handlebars.registerHelper('transpOwner', function(url, text) {
+      if (this.transparency === 1 && this.owner1_img !== "") {
+        text = Handlebars.Utils.escapeExpression(text);
+        url  = Handlebars.Utils.escapeExpression(url);
+        return new Handlebars.SafeString("<img class='o-image' src='" + url + "' data-toggle='tooltip' data-placement='top' title='" + text + "'>");
+      } else if (this.transparency === 1 && this.owner1_img === "") {
+        return new Handlebars.SafeString(
+          "<img src='assets/images/bank-people/imagenotfound.png' data-toggle='tooltip' data-placement='top' title='Немає фотографії власника'>"
+        );
+      } else if (this.transparency === 0) {
+        return new Handlebars.SafeString(
+          "<img src='assets/images/bank-people/anon.png' data-toggle='tooltip' data-placement='top' title='Непрозора структура власності'>"
+        );
+      } 
+    });
+      
+    Handlebars.registerHelper('list', function(items, options) {
+      var out = "<div class='container'><div class='my-heading-class row bank-panel panel-top'><div class='col-md-4 col-xs-4'><p class='name'>Назва банку</p></div><div class='col-md-4 col-xs-4'><p class='name'>Власник</p></div><div class='col-md-4 col-xs-4'><p class='name'>Проблеми у банку</p></div></div>";
+
+      for(var i=0, l=items.length; i<l; i++) {
+        out = out + options.fn(items[i]);
+      }
+
+      return out + "</div>";
+    });
+
+    function firstToUpperCase( str ) {
+        return str.substr(0, 1).toUpperCase() + str.substr(1);
+    }
+
+    $.get('test.json', function(data) {
+
+      //var html = template(data);
+
+      //$('#content').html(html);
+
+        var selectedData = {
+          banks: data.banks.filter(function(d) {
+            if (d.top_stories === 1) {return true;};
+          })
+        };
+        var html = template(selectedData);
+
+        $('#content').html(html);
+
+      $('#reason_1').on('click', function() {
+      	event.preventDefault();
+        var selectedData = {
+          banks: data.banks.filter(function(d) {
+            if (d.reason_1 === 1) {return true;};
+          })
+        };
+        var html = template(selectedData);
+        $('#content').html(html);
+          $('.my-heading-class').on('click', function() {
+               $(this).next('.my-content-class').slideToggle();
+            });
+      });
+
+      $('#reason_2').on('click', function() {
+      	event.preventDefault();
+        var selectedData = {
+          banks: data.banks.filter(function(d) {
+            if (d.reason_2 === 1) {return true;};
+          })
+        };
+        var html = template(selectedData);
+        $('#content').html(html);
+          $('.my-heading-class').on('click', function() {
+               $(this).next('.my-content-class').slideToggle();
+            });
+      });
+
+      $('#reason_3').on('click', function() {
+      	event.preventDefault();
+        var selectedData = {
+          banks: data.banks.filter(function(d) {
+            if (d.reason_3 === 1) {return true;};
+          })
+        };
+        var html = template(selectedData);
+        $('#content').html(html);
+          $('.my-heading-class').on('click', function() {
+               $(this).next('.my-content-class').slideToggle();
+            });
+      });
+
+      $('#reason_4').on('click', function() {
+      	event.preventDefault();
+        var selectedData = {
+          banks: data.banks.filter(function(d) {
+            if (d.reason_4 === 1) {return true;};
+          })
+        };
+        var html = template(selectedData);
+        $('#content').html(html);
+          $('.my-heading-class').on('click', function() {
+               $(this).next('.my-content-class').slideToggle();
+            });
+      });
+
+      $('#reason_5').on('click', function() {
+      	event.preventDefault();
+        var selectedData = {
+          banks: data.banks.filter(function(d) {
+            if (d.reason_5 === 1) {return true;};
+          })
+        };
+        var html = template(selectedData);
+        $('#content').html(html);
+          $('.my-heading-class').on('click', function() {
+             $(this).next('.my-content-class').slideToggle();
+          });
+      });
+
+      $('#top_stories').on('click', function() {
+      	event.preventDefault();
+        var selectedData = {
+          banks: data.banks.filter(function(d) {
+            if (d.top_stories === 1) {return true;};
+          })
+        };
+        var html = template(selectedData);
+        $('#content').html(html);
+          $('.my-heading-class').on('click', function() {
+             $(this).next('.my-content-class').slideToggle();
+          });
+      });
+
+
+      $('#reason_all').on('click', function() {
+      	event.preventDefault();
+        var selectedData = {
+          banks: data.banks.filter(function(d) {
+            if (d.reason !== 2) {return true;};
+          })
+        };
+        var html = template(selectedData);
+        $('#content').html(html);
+          $('.my-heading-class').on('click', function() {
+               $(this).next('.my-content-class').slideToggle();
+            });
+      });
+
+      $('#searchbox').keypress(function (e) {
+
+      if (e.which == 13) {
+
+        var search_text = firstToUpperCase($('#searchbox').val());
+
+        console.log(search_text);
+
+        var filteredData = {
+
+          banks: data.banks.filter(function(d){
+            
+            if (d.name.search(search_text) > -1 || d.ceo.search(search_text) > -1 || d.owner1.search(search_text) > -1 || d.owner2.search(search_text) > -1) {
+              return true;
+            }
+
+            return false;
+          })
+        };
+
+        var html = template(filteredData);
+        $('#content').html(html);
+
+
+      }
+        $('.my-heading-class').on('click', function() {
+           $(this).next('.my-content-class').slideToggle();
+        });
+    });
+
+
+        $('.my-heading-class').on('click', function() {
+           $(this).next('.my-content-class').slideToggle();
+        });
+          $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+  });
+
+  Handlebars.registerHelper('splitText', function(text) {
+    var ret = "";
+    var tempArr = text.split("•");
+    for(var i=0; i < tempArr.length; i++)
+      {
+         var ret = ret + "<li>" + tempArr[i];        
+      }
+    return ret;
+  });
+
+  </script>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="buttonelse col-md-12">
+			Завантажити: <a href="pub_20171001.xlsx"><h3><span class="label label-primary">XLSX</span></a> <a href="test.json"><span class="label label-primary">JSON</span></h3></a>
+		</div>
+	</div>
+
+</div>
+
+
+	<div class="fifth container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<h3>Проблеми у банку</h3>
+
+				<div class="banks-reasons-r row">
+					<div class="col-md-3">&nbsp;</div>
+					<div class="banks-reasons-c col-md-6">
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="icon-top col-md-4 col-xs-4"><p><span data-toggle="tooltip" data-placement="top" title="Втрата капіталу (ліквідності)"><i class='i-big first-medical-graphic-with-descendant-line'></i></span></p></div>
+									<div class="col-md-8 col-xs-8"><p>Втрата капіталу (ліквідності)</p></div>
+								</div>
+								<div class="icontop row">
+									<div class="icon-top col-md-4 col-xs-4"><p><span data-toggle="tooltip" data-placement="top" title="Фінмоніторинг/каса/шахрайство"><i class='i-big first-people'></i></span></p></div>
+									<div class="col-md-8 col-xs-8"><p>Фінмоніторинг/ каса/ шахрайство</p></div>
+								</div>
+								<div class="icontop row">
+									<div class="icon-top col-md-4 col-xs-4"><p><span data-toggle="tooltip" data-placement="top" title="Крим/АТО"><i class='i-big first-transport'></i></span></p></div>
+									<div class="col-md-8 col-xs-8"><p>Крим/ АТО</p></div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="row">
+									<div class="icon-top col-md-4 col-xs-4"><p><span data-toggle="tooltip" data-placement="top" title="За рішенням власника"><i class='i-big first-withdraw-of-a-safe-box'></i></span></p></div>
+									<div class="col-md-8 col-xs-8"><p>За рішенням власника</p></div>
+								</div>
+								<div class="icontop row">
+									<div class="icon-top col-md-4 col-xs-4"><p><span data-toggle="tooltip" data-placement="top" title="Незадовільна ділова репутація власників/ керівництва"><i class='i-big first-people-1'></i></span> </p></div>
+									<div class="col-md-8 col-xs-8"><p>Незадовільна ділова репутація власників/ керівництва</p></div>
+								</div>							
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-3">&nbsp;</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<div class="infograph container-fluid" id="timeline">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<img src="assets/images/02-02-2017_Banks_A4-07a.jpg" border="0" class="img-responsive" title="Таймлайн: Динаміка виведення банків з ринку" alt="Таймлайн: Динаміка виведення банків з ринку">
+		</div>
+	</div>
+</div>
+
+
+<div class="seventh container" id="results">
+		<div class="row">
+			<h3>Результати очищення:</h3>
+			<div class="col-md-12 col-xs-12">
+				<ul>
+				<li>вкладники можуть бути впевнені, що їхні кошти будуть повернуті вчасно та у повному обсязі;</li>
+				<li>залучені банками кошти будуть спрямовуватися на кредитування бізнесу, зокрема, малого та середнього, а не на фінансову підтримку компаній, що належали акціонерам банку;</li>
+				<li>обсяги кредитних ресурсів, доступних для підприємств, зростуть;</li>
+				<li>вартість кредитів знизиться, оскільки залучені кошти будуть спрямовуватися на внутрішній ринок, а не виводитимуться за кордон;</li>
+				<li>клієнти всіх банків будуть знати їхніх реальних власників, а тому зможуть зробити власний висновок, наскільки вони довіряють акціонерам;</li>
+				<li>стійкість банків до макроекономічних шоків підвищилася, банки матимуть достатній запас ліквідності та капіталу, щоб стабільно працювати навіть в умовах рецесії;</li>
+				<li>ефективно функціонуватиме механізм реалізації монетарної політики Національним банком України.</li>
+				</ul>
+			</div>
+		</div>
+</div>
+
+
+<div class="quote-two">
+	<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="headline">
+						<i class="fa fa-quote-left" aria-hidden="true"></i> Банки ліквідні, прозорі, готові до відновлення кредитування. Це новітня історія банківської системи України. <i class="fa fa-quote-right" aria-hidden="true"></i>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p class="speaker">
+						- Катерина Рожкова, заступник Голови НБУ
+					</p>
+				</div>
+			</div>
+	</div>
+</div>
+
+<div class="infograph container-fluid" id="formula">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<img src="assets/images/02-02-2017_Banks_A4_new-b.jpg" border="0" class="img-responsive" title="Формула очищення банківського сектору" alt="Формула очищення банківського сектору">
+		</div>
+	</div>
+</div>
+
+<div class="eighth container-fluid" id="crime-and-sentence"><div class="row"><div class="col-md-12">
+	<div class="container">
+		<div class="row">
+			<h3>Злочини та покарання</h3>
+			<div class="col-md-12 col-xs-12">
+				<p>Упродовж 2014-2016 рр. Національний банк України <a href="#" role="button" data-toggle="modal" data-target="#structBanki">вжив низку рішучих заходів щодо розкриття структури</a> власності банків. На сьогодні Національному банку України відомі власники всіх банків України. Банківська <a href="#" role="button" data-toggle="modal" data-target="#transpBanki">система є прозорою</a>, тобто кожен українець тепер може дізнатися, кому він довіряє власні кошти. </p>
+				<p>Із розкриттям прізвищ справжніх власників банків на законодавчому рівні посилено й <a href="#" role="button" data-toggle="modal" data-target="#courtBanki">відповідальність власників</a> за доведення банків до банкрутства - позбавлення волі на строк до 5 років.</p>
+				<p>Цифри і факти:</p>
+				<p><small>
+					<ul>
+					  <li>Кількість заяв, за якими розпочато досудове слідство - 1 641 шт.</li>
+					  <li>Обвинувальних актів, направлених до суду - 15.</li>
+					  <li>Станом на 01.01.2017 суди не винесли жодного обвинувального вироку щодо власників та ТОП-менеджерів неплатоспроможних банків.</li>
+					</ul>
+				</small></p>
+				<p>Незважаючи на вжиті заходи, деякі банки, використовуючи недосконалу судову систему, <a href="#" role="button" data-toggle="modal" data-target="#returnBanki">намагаються знову повернутись</a> на ринок. Це створює системні ризики для фінансової стабільності, адже судова система використовується власниками нежиттєздатних банків, як квазі-легітимний інструмент, що нівелює всі зусилля Національного банку, спрямовані на оздоровлення та очищення банківської системи України.</p>
+			</div>
+		</div>
+</div>
+
+<div class="modal fade" id="structBanki" tabindex="-1" role="dialog" aria-labelledby="structBankiLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="structBankiLabel">Перехід банківської системи у стан прозорості</h3>
+      </div>
+      <div class="modal-body">
+        <img src="assets/images/02-02-2017_Banks_A4-04.jpg" border="0" class="img-responsive">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="transpBanki" tabindex="-1" role="dialog" aria-labelledby="transpBankiLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="transpBankiLabel">Забезпечення прозорості банківської системи</h3>
+      </div>
+      <div class="modal-body">
+        <img src="assets/images/02-02-2017_Banks_A4-03.jpg" border="0" class="img-responsive">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="courtBanki" tabindex="-1" role="dialog" aria-labelledby="courtBankiLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="courtBankiLabel">Заяви до правоохоронних органів</h3>
+      </div>
+      <div class="modal-body">
+        <img src="assets/images/02-02-2017_Banks_A4-05.jpg" border="0" class="img-responsive">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="returnBanki" tabindex="-1" role="dialog" aria-labelledby="returnBankiLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="returnBankiLabel">Судові рішення щодо виведених з ринку банків</h3>
+      </div>
+      <div class="modal-body">
+        <img src="assets/images/suits_problems2_v2-01.jpg" border="0" class="img-responsive">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="top-arrow-copy col-md-5 col-xs-12">
+				<p>&copy; 2017 <a href="http://www.bank.gov.ua">Національний банк України</a></p>
+			</div>
+			<div class="top-arrow-social col-md-6 col-xs-6" id="social">
+				<a class="item facebook" href="https://www.facebook.com/NationalBankOfUkraine" rel="nofollow" target="_blank"><i class="fa fa-facebook-f fa-1x" aria-hidden="true"></i> <span class="count"></span></a>
+				<a class="item youtube" href="https://www.youtube.com/channel/UCLWsi-3SHrFwwyb0AceOgHQ" rel="nofollow" target="_blank"><i class="fa fa-youtube-play fa-1x" aria-hidden="true"></i> <span class="count"></span></a>
+				<a class="item twitter" href="https://twitter.com/NBUkraine" rel="nofollow" target="_blank"><i class="fa fa-twitter fa-1x" aria-hidden="true"></i> <span class="count"></span></a>
+			</div>
+			<div class="top-arrow col-md-1 col-xs-6">
+				<a href="#top"><i class="fa fa-chevron-up fa-1x" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+	<script type="text/javascript">
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+
+    <script type="text/javascript">
+		(function($) {
+		  $.fn.SocialCounter = function(options) {
+		    var settings = $.extend({
+		      facebook_user:'',
+		      facebook_token:'',
+		      youtube_channel:'',
+		      youtube_key:'',
+		      twitter_user:''
+		    }, options);
+
+		    function facebook(){
+		      $.ajax({
+		        url: 'https://graph.facebook.com/v2.8/'+settings.facebook_user,
+		        dataType: 'json',
+		        type: 'GET',
+		        data: {
+		          access_token:settings.facebook_token,
+		          fields:'fan_count'
+		        },
+		        success: function(data) {   
+		          var followers = parseInt(data.fan_count);
+		          var k = kFormatter(followers);
+		          //$('#social .item.facebook .count').append(k); 
+		          $('#social .item.facebook .count').append(followers).digits(); 
+		          $('#social .item.facebook').attr('href','https://facebook.com/'+settings.facebook_user);
+		          getTotal(followers); 
+		        } 
+		      }); 
+		    }
+
+		    function youtube(){
+		      $.ajax({
+		        url: 'https://www.googleapis.com/youtube/v3/channels',
+		        dataType: 'jsonp',
+		        type: 'GET',
+		        data: {part: 'statistics', id: settings.youtube_channel, key: settings.youtube_key},
+		        success: function(data) {   
+		          var subscribers = parseInt(data.items[0].statistics.subscriberCount);
+		          $('#social .item.youtube .count').append(subscribers).digits();
+		          $('#social .item.youtube').attr('href','https://youtube.com/channel/'+settings.youtube_channel);
+		          getTotal(subscribers);
+		        } 
+		      }); 
+		    }
+
+		    function twitter(){
+			    $.getJSON("https://api.roomian.org/twitter/?screen_name="+settings.twitter_user, function(json) {
+				  var followers = parseInt(json['followers']);
+				  $('#social .item.twitter .count').append(followers).digits(); 
+			      $('#social .item.twitter').attr('href','https://twitter.com/'+settings.twitter_user);
+			      getTotal(followers); 
+				});
+			}
+
+		    $.fn.digits = function(){ 
+		      return this.each(function(){ 
+		        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+		      })
+		    }
+		    //Function to add K to thousands
+		    function kFormatter(num) {
+		      return num > 999 ? (num/1000).toFixed(1) + 'k' : num;
+		    }
+		    //Total Counter
+		    var total = 0;
+		    //Get an integer paramenter from each ajax call
+		    function getTotal(data) {
+		      total = total + data;
+		      $("#total").html(total).digits();
+		      $("#total_k").html(kFormatter(total));
+		    }
+
+		    function linkClick(){
+		      $('#social .item').attr('target','_blank');
+		    }
+		    linkClick();
+
+		    if(settings.facebook_user!='' && settings.facebook_token!=''){ 
+		      facebook(); 
+		    } if(settings.youtube_channel!='' && settings.youtube_key!=''){ 
+		      youtube(); 
+		    } if(settings.twitter_user!=''){ 
+		      twitter(); 
+		    } 
+		  };
+		}(jQuery));
+    </script>
+    <script>
+      $('#social').SocialCounter({
+        facebook_user: 'NationalBankOfUkraine',
+        facebook_token:'1627334644211864|3_tGe7MNSzumVcKxMyJUTqZAlz4',
+        youtube_channel: 'UCLWsi-3SHrFwwyb0AceOgHQ',
+        youtube_key:'AIzaSyBcut1RjKlM1sN8OYEfYgdVoqH3C4rpzws',
+        twitter_user: 'NBUkraine'
+      });
+    </script>
+
+
+	<script>
+		function openNav() {
+		    document.getElementById("mySidenav").style.width = "250px";
+		    document.getElementById("main").style.marginRight = "250px";
+		    document.getElementById("nav-button").style.opacity = "0"
+		}
+
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		    document.getElementById("main").style.marginRight= "0";
+		    document.getElementById("nav-button").style.opacity = "100"
+		}
+	</script>
+
+</body>
+</html>
