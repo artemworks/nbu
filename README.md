@@ -1,4 +1,7 @@
-Portfolio of projects created for the National Bank of Ukraine.
+Portfolio of projects created for the National Bank of Ukraine
+(2016-2017)
+
+---------------------------------------------
 
 (1) **BADBANKS**
 
@@ -83,8 +86,8 @@ Repo: [/opendata-explorer/](/opendata-explorer/)
 
 Product features:
 
-- OPENDATA API integration
-- Visualization of statistics
+- Consumes OpenData REST API
+- Visualizes statistics
 
 Product screenshots:
 
