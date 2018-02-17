@@ -1,6 +1,6 @@
 Portfolio of projects created for the National Bank of Ukraine.
 
-1. **Badbanks**
+(1) **BADBANKS**
 
 Live URL: [badbanks.bank.gov.ua](http://badbanks.bank.gov.ua/ "badbanks.bank.gov.ua")
 
@@ -13,6 +13,7 @@ Product features:
 - Handlebars interactivity
 - Social Media API integration
 - Bootstrap layout
+- Search Engines friendly
 
 Product screenshots:
 
@@ -23,3 +24,25 @@ Product screenshots:
 ![Alt text](/screenshots/bb03.gif?raw=true)
 
 ![Alt text](/screenshots/bb04.png?raw=true)
+
+(2) **GLOBAL MONEY WEEK**
+
+Live URL: [gmw.bank.gov.ua](http://badbanks.bank.gov.ua/ "gmw.bank.gov.ua")
+
+Repo: [/gmw/](/badbanks/)
+
+Product features:
+
+- Well-structured Landing page
+- Event countdown
+- Social Media API integration
+- Video & Photo gallery
+- Bootstrap layout
+- Search Engines friendly
+
+Product screenshots:
+
+![Alt text](/screenshots/gmw01.png?raw=true)
+
+![Alt text](/screenshots/gmw02.png?raw=true)
+
