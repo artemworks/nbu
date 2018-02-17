@@ -25,11 +25,13 @@ Product screenshots:
 
 ![Alt text](/screenshots/bb04.png?raw=true)
 
+---------------------------------------------
+
 (2) **GLOBAL MONEY WEEK**
 
-Live URL: [gmw.bank.gov.ua](http://badbanks.bank.gov.ua/ "gmw.bank.gov.ua")
+Live URL: [gmw.bank.gov.ua](http://gmw.bank.gov.ua/ "gmw.bank.gov.ua")
 
-Repo: [/gmw/](/badbanks/)
+Repo: [/gmw/](/gmw/)
 
 Product features:
 
@@ -45,4 +47,32 @@ Product screenshots:
 ![Alt text](/screenshots/gmw01.png?raw=true)
 
 ![Alt text](/screenshots/gmw02.png?raw=true)
+
+---------------------------------------------
+
+(3) **PRIVATBANK BAILOUT**
+
+Live URL: [pb.bank.gov.ua](http://pb.bank.gov.ua/ "pb.bank.gov.ua")
+
+Repo: [/pb/](/pb/)
+
+Product features:
+
+- Well-structured Landing page
+- Various jQuery effects
+- Social Media API integration
+- Infographics
+- Bootstrap layout
+- Search Engines friendly
+
+Product screenshots:
+
+![Alt text](/screenshots/pb01.png?raw=true)
+
+![Alt text](/screenshots/pb02.png?raw=true)
+
+![Alt text](/screenshots/pb03.png?raw=true)
+
+![Alt text](/screenshots/pb04.png?raw=true)
+
 
